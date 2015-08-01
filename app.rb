@@ -1,11 +1,5 @@
-#require 'bundler'
-#Bundler.require
-
-require 'sinatra'
-require 'json'
-require 'data_mapper'
-require 'unicorn'
-require 'dm-postgres-adapter'
+require 'bundler'
+Bundler.require
 
 
 # Setup DataMapper with a database URL. On Heroku, ENV['DATABASE_URL'] will be
