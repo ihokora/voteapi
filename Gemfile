@@ -11,7 +11,7 @@ gem 'unicorn'
 # development situations.
 
 group :development do
-  #gem 'dm-sqlite-adapter'
+  gem 'dm-sqlite-adapter'
   gem 'sqlite3'
 end
 
