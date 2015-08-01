@@ -1,5 +1,11 @@
-require 'bundler'
-Bundler.require
+#require 'bundler'
+#Bundler.require
+require 'sinatra'
+require 'json'
+require 'data_mapper'
+require 'unicorn'
+require 'dm-postgres-adapter'
+
 
 # Setup DataMapper with a database URL. On Heroku, ENV['DATABASE_URL'] will be
 # set, when working locally this line will fall back to using SQLite in the
