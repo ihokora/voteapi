@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8" />
   <title>Sinatra Vote API</title>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script>
@@ -11,7 +12,7 @@
         method: 'GET'
       }).done(function (data) {
         data.forEach(function (d) {
-          $('#songs-index').append("<p><strong>" + d.title + "</strong>" /* + d.description */ + "</p>");
+          $('#songs-index').append("<p><strong>" + d.title + "</strong>" + " - " + d.likes + "</p>");
         });
       });
 
@@ -21,7 +22,7 @@
 
         // Get the data from the form elements
         data.title = $('#new-title').val();
-        data.description = $('#new-description').val();
+        //data.description = $('#new-description').val();
 
         $.ajax({
           url: '/songs',
@@ -48,8 +49,8 @@
     <p><strong>Title:</strong></p>
     <input id="new-title" name="title" type="text">
 
-    <p><strong>Description:</strong></p>
-    <textarea id="new-description" name="description"></textarea>
+    <!--<p><strong>Description:</strong></p>
+    <textarea id="new-description" name="description"></textarea>-->
 
     <p><input id="new-submit" type="submit"></p>
   </form>
