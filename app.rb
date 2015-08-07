@@ -1,6 +1,7 @@
 require 'bundler'
 Bundler.require
 
+
 =begin
 configure :development do
     DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.sqlite")
