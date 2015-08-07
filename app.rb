@@ -40,7 +40,7 @@ end
 # Route to show all Songs, ordered like a blog
 get '/songs' do
   content_type :json
-  @songs = Song.all(:order => :likes.desc)
+  @songs = Song.all(:order => :like.desc)
   @songs.to_json
 end
 
@@ -51,7 +51,7 @@ post '/songs' do
  
   @song = Song.first_or_create(params)
 
-  @song.like = @song.like.next #Incrementing the number of likes by one.
+  @song.like = @song.like.next #Incrementing the number of like by one.
 
   if @song.save
     @song.to_json
@@ -96,11 +96,11 @@ end
 
 
 
-# Route to show 5 Top Songs based on amount of their likes
+# Route to show 5 Top Songs based on amount of their like
 get '/getTop' do
   content_type :json
 
-  @topsongs = Song.all(:limit => 5, :order => [:likes.desc])
+  @topsongs = Song.all(:limit => 5, :order => [:like.desc])
 
   if @topsongs
     @topsongs.to_json
@@ -120,7 +120,7 @@ put '/songs/:id' do
 
   @song = Song.get(params[:id].to_i)
   @song.title = (params[:title])
-  @song.likes = (params[:likes])
+  @song.like = (params[:like])
   @song.save
 
   if @song.save
