@@ -46,11 +46,8 @@ end
 
 # CREATE: Route to create a new Song
 post '/songs' do
-  content_type :json  
-  #params_json = JSON.parse(request.body.read)
- 
+  content_type :json   
   @song = Song.first_or_create(params)
-
   @song.like = @song.like.next #Incrementing the number of like by one.
 
   if @song.save
@@ -78,8 +75,7 @@ end
 
 
 get '/title/:title' do
-  content_type :json
-    
+  content_type :json    
   @song = Song.first(:title => params[:title].to_s)
 
   if @song
@@ -88,9 +84,6 @@ get '/title/:title' do
     halt 404, { :error => "do not work with title(" }.to_json
   end
 end
-
-
-
 
 
 
@@ -108,7 +101,6 @@ get '/getTop' do
     halt 404, {:error => "no top 404"}.to_json
   end
 end
-
 
 
 
