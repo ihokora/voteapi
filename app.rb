@@ -1,6 +1,6 @@
 require 'bundler'
 Bundler.require
-set :default_charset, 'utf-8'
+
 
 configure :development do
     DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.sqlite")
