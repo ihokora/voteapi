@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
   <title>Sinatra Vote API</title>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script>
@@ -12,7 +11,7 @@
         method: 'GET'
       }).done(function (data) {
         data.forEach(function (d) {
-          $('#songs-index').append("<p><strong>" + d.title + "</strong>" + " - " + d.likes + "</p>");
+          $('#songs-index').append("<p><strong>" + d.title + "</strong>" + " - " + d.like + "</p>");
         });
       });
 
