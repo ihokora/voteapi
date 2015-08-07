@@ -1,7 +1,7 @@
 require 'bundler'
 Bundler.require
 
-
+=begin
 configure :development do
     DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.sqlite")
 end
@@ -9,6 +9,7 @@ end
 configure :production do
     DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_RED_URL'])
 end
+=end
 
 # Setup DataMapper with a database URL. On Heroku, ENV['DATABASE_URL'] will be
 # set, when working locally this line will fall back to using SQLite in the
