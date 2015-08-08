@@ -22,7 +22,7 @@ class Song
   include DataMapper::Resource
 
   property :id, Serial
-  property :title, String
+  property :title, String, :required => true
   property :like, Integer, :default => 0
   property :created_at, DateTime
   #property :description, Text

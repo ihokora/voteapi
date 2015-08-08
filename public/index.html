@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Sinatra Vote API</title>
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script>
     $(document).ready(function () {
       // Load THINGS data immediately
@@ -11,7 +12,8 @@
         method: 'GET'
       }).done(function (data) {
         data.forEach(function (d) {
-          $('#songs-index').append("<p><strong>" + d.title + "</strong>" + " - " + d.like + "</p>");
+          $('#songs-index').append("<p><strong>" + d.title + "</strong>" + " ----- " + d.like + "</p>");
+          
         });
       });
 
@@ -41,7 +43,7 @@
 </head>
 <body>
   <div id="songs-index">
-    <h2>All Songs</h2>
+    <h1>All Songs ----- Likes</h1>
   </div>
 
 
