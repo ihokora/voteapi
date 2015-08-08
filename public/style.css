@@ -1,0 +1,27 @@
+body {
+    background-color: #2B2B2B;
+}
+
+
+#songs-index{
+    background-color: #2B2B2B;
+    background-image: url(images/bg3.png);
+    background-position: center top;
+    background-repeat: repeat;
+    color: #E62E00;
+    /*text-shadow: #FFFFFF 0px 0px 0px;*/
+    font-family: "Georgia", "Times", serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 2% auto auto 2%;
+}
+
+a{
+    text-decoration: none;
+}
+
+#new-song{
+    margin: 1% auto auto 3%;
+    width: 1000px;
+    min-height: 500px;
+    padding: 0px 20px 0px 20px;
+}
