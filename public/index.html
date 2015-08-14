@@ -2,8 +2,14 @@
 <html>
 <head>
   <title>Sinatra Vote API</title>
+  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link  href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,bold" rel="stylesheet" type="text/css" >
+  <link  href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold" rel="stylesheet" type="text/css" >
   <link href="style.css" rel="stylesheet" type="text/css"/>
-  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
   <script>
     $(document).ready(function () {
       // Load THINGS data immediately
@@ -12,13 +18,43 @@
         method: 'GET'
       }).done(function (data) {
         data.forEach(function (d) {
+
+
+          /*var table = $('<table></table>').addClass('foo');
+          for(i=0; i<1; i++){
+            var row = $('<tr></tr>').addClass('bar').text(' ' + d.title + d.like);
+            table.append(row);
+          }
+          $('#songs-index').append(table)*/
+
+
+          /*var table = document.createElement('table');
+          for (var i = 1; i < 2; i++){
+            var tr = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var title = document.createTextNode(d.title);
+            var like = document.createTextNode(d.like);
+
+            td1.appendChild(title);
+            td2.appendChild(like);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            table.appendChild(tr);
+          }
+          $('#songs-index').append(table)*/
+
+
           $('#songs-index').append("<p><strong>" + d.title + "</strong>" + " ----- " + d.like + "</p>");
+
+          
+
           
         });
       });
 
       // Form to create a new Song
-      $('#new-submit').click(function () {
+      $('.button').click(function () {
         var data = {}; 
         alert("OK, OK, I'm clicked!");
         location.reload(true);
@@ -47,7 +83,7 @@
   </div>
 
 
-  <h2>New Song</h2>
+  <h2>You can vote here:</h2>
   <form id="new-song">
     <p><strong>Title:</strong></p>
     <input id="new-title" name="title" type="text">
@@ -55,8 +91,12 @@
     <!--<p><strong>Description:</strong></p>
     <textarea id="new-description" name="description"></textarea>-->
 
-    <p><input id="new-submit" type="submit"></p>
+  <a class="button">
+    <span>submit</span>
+  </a>
+    
   </form>
+  
 
 </body>
 </html>

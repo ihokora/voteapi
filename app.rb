@@ -87,6 +87,19 @@ get '/title/:title' do
 end
 
 
+get '/getLike' do
+  content_type :json
+  @song = Song.first(:title => params[:title].to_s)
+  
+  
+  if @song
+    @song.to_json(:only => [:like])
+  else
+    halt 404, {:error => "getLike do not working"}
+  end
+end
+
+
 
 
 
