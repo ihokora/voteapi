@@ -41,7 +41,7 @@
 
           /*$('#songs-index').append("<p><strong>" + d.title + "</strong>" + " ----- " + d.like + "</p>");*/
 
-          $("#songs-index").append("<table>" + "<thead>" + "<tr><th>" + "song" +"</th>" + "<th>" + "like" + "</th>" + "</tr>" + "</thead>" + "<tbody><tr><td>" + d.title + "</p></td><td>" + d.like + "</tr>" + "</tbody>" + "</table>");
+          $("#songs-index").append(/*"<thead>" + "<th>" + "song" +"</th><th>" + "like" + "</th>" + "</thead>"*/  "<tbody><tr><td>" + d.title + "</p></td><td>" + d.like + "</p></tr>" + "</tbody>");
 
 
           
@@ -73,16 +73,29 @@
   </script>
 </head>
 <body>
-  <div id="songs-index">
-    <h1>Song ----- Likes</h1>
+  <!--<div id="songs-index">-->
+    
+    <table id="songs-index">
+    <thead>
+     <tr>
+      <th>Track
+      <th>Likes      
+    </thead>
+    <tbody>
+      
+    </tbody>
+    </table>
+    
+      
+    
     
 
-  </div>
+  
 
 
   <h2>You can vote here:</h2>
   <form id="new-song">
-    <p style="color: white;"><strong>Enter song title:</strong></p>
+    <p style="color: white; margin: 2em;"><strong>Enter song title:</strong></p>
     <input id="new-title" name="title" type="text">
 
     <!--<p><strong>Description:</strong></p>

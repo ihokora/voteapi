@@ -1,5 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     background-color: #2B2B2B;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1{
@@ -8,51 +17,56 @@ h1{
 
 h2 {
     color: beige;
+    margin: 1em;
 }
 
-table {
+
+
+#songs-index {
   background: #012B39;
   color: #E62E00;
-  border-radius: 0.25em;
+  border-radius: 0.45em;
   border-collapse: collapse;
-  margin: 1em;
+  margin: 2em;
+  width: 25em;
+
 }
 th {
   border-bottom: 1px solid #364043;
   color: #E2B842;
-  font-size: 0.85em;
+  font-size: 0.95em;
   font-weight: 600;
-  padding: 0.5em 1em;
+  padding: 0.8em 1em;
   text-align: left;
 }
 td {
   color: #E62E00;
   font-weight: 400;
   padding: 0.65em 1em;
+  vertical-align: middle;
 }
-.disabled td {
-  color: #4F5F64;
-}
+
 tbody tr {
   transition: background 0.25s ease;
 }
 tbody tr:hover {
   background: #014055;
+  
 }
 
 
 
-#songs-index{
+/*songs-index{
     background-color: #2B2B2B;
     background-image: ;
     background-position: center top;
     background-repeat: repeat;
     color: #E62E00;
-    /*text-shadow: #FFFFFF 0px 0px 0px;*/
+    /*text-shadow: #FFFFFF 0px 0px 0px;
     font-family: "Georgia", "Times", serif;
     -webkit-font-smoothing: antialiased;
     margin: 2% auto auto 2%;
-}
+}*/
 
 a{
     text-decoration: none;
@@ -60,12 +74,10 @@ a{
 
 #new-submit{
     color: #E62E00;
-    position: absolute;
-    
-    
+    position: absolute;   
 
     display: inline-block;
-    margin: 0 auto;
+    margin: 1em;
     
     -webkit-border-radius: 10px;
     
@@ -85,14 +97,16 @@ a{
 }
 
 #new-song{
-    margin: 1% auto auto 3%;
+    margin: 1% auto auto 1%;
     width: 1000px;
     min-height: 500px;
     padding: 0px 20px 0px 20px;
     
+    
 }
 
 #new-title{
+    margin: 1em;
     color: #E62E00;
     -webkit-border-radius: 5px;
     -webkit-box-shadow: 
@@ -115,7 +129,7 @@ button {
     -webkit-border-radius: 10px;
     
     -webkit-box-shadow: 
-        0px 3px rgba(128,128,128,1), /* gradient effects */
+        0px 3px rgba(128,128,2,1), /* gradient effects */
         0px 4px rgba(118,118,118,1),
         0px 5px rgba(108,108,108,1),
         0px 6px rgba(98,98,98,1),
