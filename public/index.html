@@ -19,25 +19,19 @@
       }).done(function (data) {
         data.forEach(function (d) {
 
-
-          /*var table = $('<table></table>').addClass('foo');
-          for(i=0; i<1; i++){
-            var row = $('<tr></tr>').addClass('bar').text(' ' + d.title + d.like);
-            table.append(row);
-          }
-          $('#songs-index').append(table)*/
-
-
           /*var table = document.createElement('table');
+          
           for (var i = 1; i < 2; i++){
+            
             var tr = document.createElement('tr');
             var td1 = document.createElement('td');
             var td2 = document.createElement('td');
             var title = document.createTextNode(d.title);
             var like = document.createTextNode(d.like);
+            
 
             td1.appendChild(title);
-            td2.appendChild(like);
+            td2.appendChild(like);            
             tr.appendChild(td1);
             tr.appendChild(td2);
             table.appendChild(tr);
@@ -45,9 +39,10 @@
           $('#songs-index').append(table)*/
 
 
-          $('#songs-index').append("<p><strong>" + d.title + "</strong>" + " ----- " + d.like + "</p>");
+          /*$('#songs-index').append("<p><strong>" + d.title + "</strong>" + " ----- " + d.like + "</p>");*/
 
-          
+          $("#songs-index").append("<table>" + "<thead>" + "<tr><th>" + "song" +"</th>" + "<th>" + "like" + "</th>" + "</tr>" + "</thead>" + "<tbody><tr><td>" + d.title + "</p></td><td>" + d.like + "</tr>" + "</tbody>" + "</table>");
+
 
           
         });
@@ -57,7 +52,7 @@
       $('.button').click(function () {
         var data = {}; 
         alert("OK, OK, I'm clicked!");
-        location.reload(true);
+        location.reload();
 
         // Get the data from the form elements
         data.title = $('#new-title').val();
@@ -80,6 +75,8 @@
 <body>
   <div id="songs-index">
     <h1>Song ----- Likes</h1>
+    
+
   </div>
 
 
