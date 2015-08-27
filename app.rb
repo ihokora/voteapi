@@ -26,6 +26,7 @@ class Song
   property :like, Integer, :default => 0
   property :created_at, DateTime
   #property :description, Text
+  #validates_uniqueness_of :name, :case_sensitive => false
 end
 
 # Finalize the DataMapper models.
