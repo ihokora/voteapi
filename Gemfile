@@ -4,10 +4,9 @@ ruby '2.2.2'
 gem 'sinatra'
 gem 'json'
 gem 'data_mapper'
-gem 'unicorn'
-gem '3scale_client'
+gem 'passenger'
 
-# When developing an app locally you can use SQLite which is a relational
+# When developing an app locally you can use mysql which is a relational
 # database stored in a file. It's easy to set up and just fine for most
 # development situations.
 
@@ -17,7 +16,7 @@ group :development do
 end
 
 # Heroku uses Postgres however, so we tell the Gemfile to use Postgres
-# in production instead of SQLite.
+# in production instead of mysql.
 group :production do
   gem 'dm-postgres-adapter'
   gem 'pg'

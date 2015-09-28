@@ -44,6 +44,9 @@ td {
   font-weight: 400;
   padding: 0.65em 1em;
   vertical-align: middle;
+  border-radius: 0.35em;
+  text-align: left;
+  
 }
 
 tbody tr {
@@ -51,6 +54,9 @@ tbody tr {
 }
 tbody tr:hover {
   background: #014055;
+  -webkit-transform:scale(1.05);
+  z-index: 2;
+  text-align: center;
   
 }
 
@@ -210,6 +216,7 @@ button {
             color: #E62E00;
             text-shadow: 0px -1px #97A63A;
             cursor: pointer;
+            -webkit-transform:scale(1.1);
         }
 
         .button:active {
